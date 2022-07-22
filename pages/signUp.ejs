@@ -1,18 +1,74 @@
 <html>
-    <head>
-        <title>Sign Up Page</title>
-    </head>
-    <body>
-        <div id="alert-box1">
-            <% if(locals.success==1){%>
-                <p>Confirm password wrong!!</p>
-            <%}%>
+
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="left">
+            <a  href="/">
+                <img id="logo" src="Logo.svg">
+                </a>
+            <div id="form">
+                <div id="signin">
+                    <form action="/signup-details" method="post">
+                        <div class="int1">
+                            <input id="int" type="text" name="name" placeholder="Username" required>
+                        </div>
+                        <div class="int2">
+                            <input id="intt" type="text" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="int3">
+                            <input id="inttt" type="password" name="confirmpass" placeholder="Confirm Password" required>
+                        </div>
+                        <div id="alert-box1">
+                            <% if(locals.success==1){%>
+                                <p>Confirm password wrong!!</p>
+                                <%}%>
+                        </div>
+                        <button type="submit" id="Sin">Sign Up</button>
+                    </form>
+                </div>
+
+                <!-- Student Link -->
+                <div id="student">
+                    <a id="ac" href="/student">
+                        Are you a student?
+                    </a>
+                </div>
+            </div>
+            <div id="lastline">
+                <p>AGNI MONITORING AND ANALYSIS SOFTWARE</p>
+            </div>
         </div>
-        <form action="/signup-details" method="Post">
-            <input type="text" name="name" placeholder="Enter UserName" required>
-            <input type="text" name="password" placeholder="Enter New Password" required>
-            <input type="text" name="confirmpass" placeholder="Confirm Password" required>
-            <button type="submit" >Sign Up</button>
-        </form>
-    </body>
+
+
+        <div id="right">
+            <div id="text">
+                <div id="text1">
+                    <p id="text1-p1">Best In class Analysis of the system.</p>
+                </div>
+                <div id="svg">
+                    <img id="img2" src="SVG1.svg">
+                </div>
+            </div>
+
+            <div id="text2">
+                <ul id="list">
+                    <li>24 x 7 Servalance option</li>
+                    <li>Graphical Representation</li>
+                    <li>Tabular Representation</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+        <script src="signup.js"></script>
+</body>
+
 </html>

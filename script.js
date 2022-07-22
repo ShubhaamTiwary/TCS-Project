@@ -47,7 +47,7 @@ app.post('/signin-validation',function(req,res){
             console.log("Error from Fetching the contacts");
             return;
         }
-        // console.log(data);
+        console.log(data);
         if(data){
             if(data.password==req.body.password){
                 console.log('Correct Password');
@@ -56,7 +56,7 @@ app.post('/signin-validation',function(req,res){
                 return res.redirect(url);
                 }
                 else{
-                    console.log('Incoorect Id or Password');
+                    console.log('Incorect Id or Password');
                 }
             }
             else{
