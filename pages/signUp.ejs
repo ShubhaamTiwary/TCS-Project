@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Sign Up Page</title>
+    </head>
+    <body>
+        <div id="alert-box1">
+            <% if(locals.success==1){%>
+                <p>Confirm password wrong!!</p>
+            <%}%>
+        </div>
+        <form action="/signup-details" method="Post">
+            <input type="text" name="name" placeholder="Enter UserName" required>
+            <input type="text" name="password" placeholder="Enter New Password" required>
+            <input type="text" name="confirmpass" placeholder="Confirm Password" required>
+            <button type="submit" >Sign Up</button>
+        </form>
+    </body>
+</html>
