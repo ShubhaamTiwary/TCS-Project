@@ -1,8 +1,68 @@
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Student Login</title>
+        <link rel="stylesheet" href="student.css">
     </head>
     <body>
-            Student
+        <div id="container">
+            <div id="left">
+                <a  href="/">
+                    <img id="logo" src="Logo.svg">
+                    </a>
+                <div id="form">
+                    <div id="signin">
+                        <!-- Sign in  -->
+                        <form action="/student-validation" method="post">
+    
+                            <div class="int1">
+                                <input id="int" type="text" name="name" placeholder="Username" required>
+                            </div>
+                            <div class="int2"> 
+                                <input id="intt" type="text" name="password" placeholder="Password" required>
+                            </div>
+                            <div id="alert-box1">
+                                <% if(locals.student_login==1){%> 
+                                    <p>Wrong Username or Password!!</p>
+                                <%}%> 
+                            </div>
+                            <button type="submit" id="Sin">Sign in</button>
+                        </form>
+                        
+                    </div>
+                    
+                    <!-- Student Link -->
+                    <div id="student">
+                        <a id="ac"  href="/">
+                            I am not a student!!
+                        </a>
+                    </div>
+                </div>
+                <div id="lastline">
+                    <p>AGNI MONITORING AND ANALYSIS SOFTWARE</p>
+                </div>
+            </div>
+    
+    
+            <div id="right">
+                <div id="text">
+                    <div id="svg">
+                        <img id="img2" src="student.svg">
+                    </div>
+                    <div id="text1">
+                        This is a 
+                        <br>
+                        Student Login Page
+                    </div>
+                </div>
+                <div id="text2">
+                    <p>
+                        Hi, hope you are enjoying the day today.  Login in with your college Enrollment id to have access.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    
+        </div>
     </body>
 </html>

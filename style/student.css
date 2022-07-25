@@ -28,17 +28,28 @@ body {
 }
 
 #text {
-    padding-top: 15vh;
+    padding-top: 8vh;
     padding-left: 4vw;
-    display: flex;
 }
 
 #text2 {
-    padding-left: 2vw;
+    padding-left: 4vw;
+    padding-top: 3vh;
+    height: 14vh;
+    width: 40vw;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #447DBF;
 }
 
 #text1 {
-    width: 23.6vw;
+    width: 40vw;
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;
@@ -51,8 +62,10 @@ body {
 }
 
 #img2 {
-    height: 37vh;
-    width: 18.2vw;
+    height: 40vh;
+    width: 20vw;
+    padding-left: 13vw;
+    padding-top: 0;
 }
 
 #list {
@@ -121,6 +134,8 @@ li {
     letter-spacing: -0.015em;
     text-decoration-line: underline;
     color: #626977;
+    text-decoration: none;
+    color: #447DBF;
 }
 
 #lastline {

@@ -7,6 +7,6 @@ const db=mongoose.connection;
 db.on('error', console.error.bind(console,'error connection DB'));
 
 db.once('open',function(){
-    console.log('Succesfully Connected to DB')
+    console.log('Succesfully Connected to Emplyees DB')
 });
 
