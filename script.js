@@ -8,6 +8,14 @@ app.set('views', path.join(__dirname,'pages'));
 app.use(express.urlencoded());
 app.use(express.static('style'));
 
+var Total=0;
+var matlab_1=0;var matlab_2=0;var matlab_3=0;
+var idea_1=0;var idea_2=0;var idea_3=0;
+var ms_1=0;var ms_2=0;var ms_3=0;
+var pycharm_1=0;var pycharm_2=0;var pycharm_3=0;
+var vs_1=0;var vs_2=0;var vs_3=0;
+var figma_1=0;var figma_2=0;var figma_3=0;
+
 // Requiring emplyee DB
 const db=require('./database/config/mongoose');
 const Labs=require('./database/models/model');
@@ -33,7 +41,6 @@ var success=0;
 var login=0;
 var student_login=0;
 var id=0;
-
 var LAB="";
 
 
@@ -43,7 +50,9 @@ app.get('/',function(req,res){
 });
 
 app.get('/Matlab',function(req,res){ 
+    Total++;
     if(LAB=="Lab1"){
+        matlab_1++;
         Lab1.create({
             enrollment:id,
             app:'Matlab',
@@ -56,6 +65,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        matlab_2++;
         Lab2.create({
             enrollment:id,
             app:'Matlab',
@@ -68,6 +78,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        matlab_3++;
         Lab3.create({
             enrollment:id,
             app:'Matlab',
@@ -79,9 +90,11 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
-    return res.render('student_exit');
+    return res.render('student_exit',{APP:"Matlab"});
 });app.get('/idea',function(req,res){ 
+    Total++;
     if(LAB=="Lab1"){
+        idea_1++;
         Lab1.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -94,6 +107,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        idea_2++;
         Lab2.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -106,6 +120,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        idea_3++;
         Lab3.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -117,9 +132,11 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
-    return res.render('student_exit');
+    return res.render('student_exit',{APP:"idea"});
 });app.get('/ms',function(req,res){ 
+    Total++;
     if(LAB=="Lab1"){
+        ms_1++;
         Lab1.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -132,6 +149,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        ms_2++;
         Lab2.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -144,6 +162,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        ms_3++;
         Lab3.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -155,9 +174,11 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
-    return res.render('student_exit');
-});app.get('/Pycharm',function(req,res){ 
+    return res.render('student_exit',{APP:"ms"});
+});app.get('/Pycharm',function(req,res){
+    Total++;
     if(LAB=="Lab1"){
+        pycharm_1++;
         Lab1.create({
             enrollment:id,
             app:'PyCharm',
@@ -170,6 +191,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        pycharm_2++;
         Lab2.create({
             enrollment:id,
             app:'PyCharm',
@@ -182,6 +204,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        pycharm_3++;
         Lab3.create({
             enrollment:id,
             app:'PyCharm',
@@ -193,9 +216,11 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
-    return res.render('student_exit');
+    return res.render('student_exit',{APP:"Pycharm"});
 });app.get('/vs',function(req,res){ 
+    Total++;
     if(LAB=="Lab1"){
+        vs_1++;
         Lab1.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -208,6 +233,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        vs_2++;
         Lab2.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -220,6 +246,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        vs_3++;
         Lab3.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -231,9 +258,11 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
-    return res.render('student_exit');
-});app.get('/Figma',function(req,res){ 
+    return res.render('student_exit',{APP:"vs"});
+});app.get('/Figma',function(req,res){
+    Total++; 
     if(LAB=="Lab1"){
+        figma_1++;
         Lab1.create({
             enrollment:id,
             app:'Figma',
@@ -246,6 +275,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
+        figma_2++;
         Lab2.create({
             enrollment:id,
             app:'Figma',
@@ -258,6 +288,7 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
+        figma_3++;
         Lab3.create({
             enrollment:id,
             app:'Figma',
@@ -269,21 +300,22 @@ app.get('/Matlab',function(req,res){
             return ;
         });        
     }
+    return res.render('student_exit',{APP:"Figma"});
+});
+
+app.get('/student-exit',function(req,res){
     return res.render('student_exit');
 });
 
-
-
-
 app.get('/student_Lab1',function(req,res){ 
     LAB="Lab1";
-    return res.render('selection');
+    return res.render('selection',{LAB:LAB});
 });app.get('/student_Lab2',function(req,res){ 
     LAB="Lab2";
-    return res.render('selection');
+    return res.render('selection',{LAB:LAB});
 });app.get('/student_Lab3',function(req,res){ 
     LAB="Lab3";
-    return res.render('selection');
+    return res.render('selection',{LAB:LAB});
 });
 
 app.get('/signin',function(req,res){ 
@@ -307,9 +339,22 @@ app.post('/signin',function(req,res){
     return res.render('signin',{Login:login});
 });
 
+app.get('/login0',function(req,res){ 
+    return res.render('login0',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+});
+
+app.get('/login1',function(req,res){ 
+    return res.render('login1',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+});
+app.get('/login2',function(req,res){ 
+    return res.render('login2',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+});
+app.get('/login3',function(req,res){ 
+    return res.render('login3',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+});
 
 app.post('/signin-validation',function(req,res){ 
-    var url='/login-';
+    var url='/login';
     login=0;
     Labs.findOne({name:req.body.name},function(err,data){
         if(err){
@@ -321,8 +366,7 @@ app.post('/signin-validation',function(req,res){
             if(data.password==req.body.password){
                 console.log('Correct Password');
                 url=url+data.count;
-                // console.log(url);
-                return res.redirect(url);
+                    return res.redirect(url);
                 }
                 else{
                     login=1;

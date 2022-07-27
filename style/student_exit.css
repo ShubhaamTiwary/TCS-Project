@@ -1,0 +1,40 @@
+body {
+    top: 0%;
+    padding: 0 px;
+    margin: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#head{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0px;
+    margin: 0px;
+    width: 101vw;
+    height: 20vh;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(199, 66, 221, 0.15) -11.67%, rgba(52, 137, 215, 0) 111.87%);
+}
+#logo{
+    width: 20vw;
+    height: 15vh;
+}
+#photo{
+    display: flex;
+    justify-content: center;
+}
+#photo2{
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+#logo3{
+    height:28vh;
+    width:65vw;
+}
+#logo2{
+    height:35vh;
+    width:70vw;
+}

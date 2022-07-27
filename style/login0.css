@@ -1,0 +1,233 @@
+body{
+    top: 0%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+#div1{
+    display: flex;
+    padding-top: 4.5vh;
+}
+#logo11{
+    height: 12.5vh;
+    width: 16.3vw;
+}
+#logo12{
+    height: 11vh;
+    width: 11vw;
+}
+#logo13{
+    height: 11vh;
+    width: 11vw;
+}
+
+#div12{
+    padding-left: 47.5vw;
+}
+#div11{
+    padding-left: 4.5vw;
+}
+
+#div2{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5vh;
+}
+#logo21{
+    width: 97vw;
+    height: 17vh;
+}
+#div3{
+    padding-top: 3.5vh;
+    display: flex
+}
+#logo31{
+    width: 97vw;
+    height: 34.2vh;
+}
+#text{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 81.3vw;
+    padding-top: 2vh;
+}
+#div4{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+}
+#logo41{
+    width: 95vw;
+    height: 54vh;
+}
+#qqq{
+    display: flex;
+    padding-top: -2vh;
+}
+#text1{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 70.3vh;
+    left: 38.5vw;
+}
+#text2{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 70.3vh;
+    left: 78.4vw;
+}
+#text3{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 89.3vh;
+    left: 38.5vw;
+}
+#text4{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 89.3vh;
+    left: 78.4vw;
+}
+#text5{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 108.3vh;
+    left: 38.5vw;
+}
+#text6{
+    position: absolute;
+    width: 15vw;
+    height: 29vh;
+    font-family: 'Suranna';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #6379C6;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    margin: 0px;
+    top: 108.3vh;
+    left: 78.4vw;
+} 
+#div5{
+    display: flex;
+    padding-top: 0vh;
+    /* justify-content: center; */
+}
+#div5{
+    height: 50vh;
+    width: 90vw
+}
+#labs{
+    height: 51vh;
+    width: 85vw
+}
+#div50{
+    position: absolute;
+    top: 120vh;
+    padding-left: 6.4vw;
+}
+
+#div51{
+    position: absolute;
+    top: 138vh;
+    left: 10vw;
+    height: 15vh;
+    width: 20vw;
+ 
+}
+#div52{
+    position: absolute;
+    top: 138vh;
+    left: 38vw;
+    height: 15vh;
+    width: 20vw;
+  
+}
+#div53{
+    position: absolute;
+    top: 138vh;
+    left: 68vw;
+    height: 15vh;
+    width: 20vw;
+
+}

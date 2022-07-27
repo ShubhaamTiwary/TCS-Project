@@ -4,16 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8ea5ea9094.js" crossorigin="anonymous"></script>
+    <title>Selection Page </title>
+    <link rel="stylesheet" href="selection.css">
 </head>
 <body>
-    Plz select app
-    <a href="/Matlab"><button>Matlab</button></a>
-    <a href="/idea"><button>IDEA</button></a>
-    <a href="/ms"><button>MS office</button></a>
-    <a href="/Pycharm"><button>Pycharm</button></a>
-    <a href="/vs"><button>Visual Studio</button></a>
-    <a href="/Figma"><button>Figma</button></a>
+    <div id="head">
+        <div id="image">
+            <a  href="/">
+                <img id="logo" src="logo44.svg">
+            </a>
+        </div>
+    </div>
+    <div id="content1">
+        <!-- <div id="LeftRight"> -->
+            <div class="head-image" id="id1">
+                <a href="/student_home">
+                    <img src="backicon.svg" id="back">
+                </a>
+            </div>
+            <div id="left">
+                Lab No.
+                <% if(locals.LAB=="Lab1"){%> 1
+                    <%}%>
+                    <% if(locals.LAB=="Lab2"){%> 2
+                    <%}%>
+                    <% if(locals.LAB=="Lab3"){%> 3
+                    <%}%>
+                    <br>
+                    Select the app you 
+                    <br>s
+                    will be using
+            </div>
+            <div id="right">
+                <img id="logo2" src="Svg4.svg">
+            </div>
+            <div class="head-image" id="id2">
+                <a href="/student">
+                    <img src="logouticon.svg" id="back">
+                </a>
+            </div>
+        <!-- </div> -->
+        </div>
+
+        <div class="appslist1">
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="matlab.svg">
+                </div>
+                <div>
+                    <a href="/Matlab"><button class="buttons">
+                        <section class="text">Matlab</section> 
+                    </button></a>
+                </div>
+            </div>
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="intelij.svg">
+                </div>
+                <div>
+                    <a href="/idea"><button class="buttons">
+                        <section class="text">Intellij IDEA</section>
+                    </button></a>
+                </div>
+            </div>
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="msofiice.svg">
+                </div>
+                <div>
+                    <a href="/ms"><button class="buttons">
+                        <section class="text">MS office Suits</section>
+                        </button></a>
+                </div>
+            </div>
+        </div>
+        <div class="appslist1">
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="pycharm.svg">
+                </div>
+                <div>
+                    <a href="/Pycharm"><button class="buttons">
+                        <section class="text"> Pycharm</section>
+                    </button></a>
+                </div>
+            </div>
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="vs.svg">
+                </div>
+                <div>
+                    <a href="/vs"><button class="buttons">
+                        <section class="text">Visual Studio</section>
+                    </button></a>
+                </div>
+            </div>
+            <div class="apps">
+                <div id="img">
+                    <img class="icon" src="figma.svg">
+                </div>
+                <div>
+                    <a href="/Figma"><button class="buttons">
+                        <section class="text">Figma</section>
+                        </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

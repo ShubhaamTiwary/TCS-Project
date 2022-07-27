@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exit</title>
+    <link rel="stylesheet" href="student_exit.css">
+    
 </head>
 <body>
-    Thanks for your time
+    <div id="head">
+        <div id="image">
+            <a  href="/">
+                <img id="logo" src="logo44.svg">
+            </a>
+        </div>
+    </div>
+    <div id="photo">
+        <img id="logo3" src="exit.svg">
+    </div>
+    <div id="photo2">
+        <% if(locals.APP=="Matlab"){%>
+            <img id="logo2" src="MatlabImg.svg">
+        <%}%>
+        <% if(locals.APP=="idea"){%>
+            <img id="logo2" src="Intellijimg.svg">
+        <%}%>
+        <% if(locals.APP=="ms"){%>
+            <img id="logo2" src="msofficeimg.svg">
+        <%}%>
+        <% if(locals.APP=="Pycharm"){%>
+            <img id="logo2" src="Pycharmimg.svg">
+        <%}%>
+        <% if(locals.APP=="vs"){%>
+            <img id="logo2" src="vsimg.svg">
+        <%}%>
+        <% if(locals.APP=="Figma"){%>
+            <img id="logo2" src="Figmaimg.svg">
+        <%}%>
+    </div>
+
 </body>
 </html>
