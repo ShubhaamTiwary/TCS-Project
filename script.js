@@ -36,12 +36,15 @@ const Lab2=require('./database/models4/model');
 const db5=require('./database/config5/mongoose');
 const Lab3=require('./database/models5/model');
 
-var Global_count=0;
+var Global_count=1;
 var success=0;
 var login=0;
 var student_login=0;
 var id=0;
 var LAB="";
+var Lab_1={};
+var Lab_2;
+var Lab_3;
 
 
 // All get commands
@@ -50,9 +53,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/Matlab',function(req,res){ 
-    Total++;
     if(LAB=="Lab1"){
-        matlab_1++;
         Lab1.create({
             enrollment:id,
             app:'Matlab',
@@ -65,7 +66,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        matlab_2++;
         Lab2.create({
             enrollment:id,
             app:'Matlab',
@@ -78,7 +78,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        matlab_3++;
         Lab3.create({
             enrollment:id,
             app:'Matlab',
@@ -92,9 +91,7 @@ app.get('/Matlab',function(req,res){
     }
     return res.render('student_exit',{APP:"Matlab"});
 });app.get('/idea',function(req,res){ 
-    Total++;
     if(LAB=="Lab1"){
-        idea_1++;
         Lab1.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -107,7 +104,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        idea_2++;
         Lab2.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -120,7 +116,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        idea_3++;
         Lab3.create({
             enrollment:id,
             app:'Intellij IDEA',
@@ -134,9 +129,7 @@ app.get('/Matlab',function(req,res){
     }
     return res.render('student_exit',{APP:"idea"});
 });app.get('/ms',function(req,res){ 
-    Total++;
     if(LAB=="Lab1"){
-        ms_1++;
         Lab1.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -149,7 +142,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        ms_2++;
         Lab2.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -162,7 +154,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        ms_3++;
         Lab3.create({
             enrollment:id,
             app:'MS Office Suit',
@@ -176,9 +167,7 @@ app.get('/Matlab',function(req,res){
     }
     return res.render('student_exit',{APP:"ms"});
 });app.get('/Pycharm',function(req,res){
-    Total++;
     if(LAB=="Lab1"){
-        pycharm_1++;
         Lab1.create({
             enrollment:id,
             app:'PyCharm',
@@ -191,7 +180,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        pycharm_2++;
         Lab2.create({
             enrollment:id,
             app:'PyCharm',
@@ -204,7 +192,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        pycharm_3++;
         Lab3.create({
             enrollment:id,
             app:'PyCharm',
@@ -218,9 +205,7 @@ app.get('/Matlab',function(req,res){
     }
     return res.render('student_exit',{APP:"Pycharm"});
 });app.get('/vs',function(req,res){ 
-    Total++;
     if(LAB=="Lab1"){
-        vs_1++;
         Lab1.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -233,7 +218,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        vs_2++;
         Lab2.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -246,7 +230,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        vs_3++;
         Lab3.create({
             enrollment:id,
             app:'Visual Studio 2022',
@@ -260,9 +243,7 @@ app.get('/Matlab',function(req,res){
     }
     return res.render('student_exit',{APP:"vs"});
 });app.get('/Figma',function(req,res){
-    Total++; 
     if(LAB=="Lab1"){
-        figma_1++;
         Lab1.create({
             enrollment:id,
             app:'Figma',
@@ -275,7 +256,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab2"){
-        figma_2++;
         Lab2.create({
             enrollment:id,
             app:'Figma',
@@ -288,7 +268,6 @@ app.get('/Matlab',function(req,res){
         });        
     }
     if(LAB=="Lab3"){
-        figma_3++;
         Lab3.create({
             enrollment:id,
             app:'Figma',
@@ -340,22 +319,162 @@ app.post('/signin',function(req,res){
 });
 
 app.get('/login0',function(req,res){ 
-    return res.render('login0',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+    Lab1.find({},function(err,data){
+        if(err){
+            console.log("Error from Fetching the contacts");
+            return;
+        }
+        // console.log(data);
+            if(data){
+                Lab2.find({},function(err,data2){
+                    if(err){
+                        console.log("Error from Fetching the contacts");
+                        return;
+                    }
+                    // console.log(data);
+                        if(data2){
+                            Lab3.find({},function(err,data3){
+                                if(err){
+                                    console.log("Error from Fetching the contacts");
+                                    return;
+                                }
+                                // console.log(data);
+                                    if(data3){
+                                        return res.render('login0',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3,Lab_1:data,Lab_2:data2,Lab_3:data3});
+                                    }
+                                });
+                        }
+                    });
+            }
+        });
+   
 });
 
 app.get('/login1',function(req,res){ 
-    return res.render('login1',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+    Lab1.find({},function(err,data){
+        if(err){
+            console.log("Error from Fetching the contacts");
+            return;
+        }
+        // console.log(data);
+            if(data){
+                Lab2.find({},function(err,data2){
+                    if(err){
+                        console.log("Error from Fetching the contacts");
+                        return;
+                    }
+                    // console.log(data);
+                        if(data2){
+                            Lab3.find({},function(err,data3){
+                                if(err){
+                                    console.log("Error from Fetching the contacts");
+                                    return;
+                                }
+                                // console.log(data);
+                                    if(data3){
+                                        return res.render('login1',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3,Lab_1:data,Lab_2:data2,Lab_3:data3});
+                                    }
+                                });
+                        }
+                    });
+            }
+        });
 });
 app.get('/login2',function(req,res){ 
-    return res.render('login2',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+    Lab1.find({},function(err,data){
+        if(err){
+            console.log("Error from Fetching the contacts");
+            return;
+        }
+        // console.log(data);
+            if(data){
+                Lab2.find({},function(err,data2){
+                    if(err){
+                        console.log("Error from Fetching the contacts");
+                        return;
+                    }
+                    // console.log(data);
+                        if(data2){
+                            Lab3.find({},function(err,data3){
+                                if(err){
+                                    console.log("Error from Fetching the contacts");
+                                    return;
+                                }
+                                // console.log(data);
+                                    if(data3){
+                                        return res.render('login2',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3,Lab_1:data,Lab_2:data2,Lab_3:data3});
+                                    }
+                                });
+                        }
+                    });
+            }
+        });
 });
 app.get('/login3',function(req,res){ 
-    return res.render('login3',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3});
+    Lab1.find({},function(err,data){
+        if(err){
+            console.log("Error from Fetching the contacts");
+            return;
+        }
+        // console.log(data);
+            if(data){
+                Lab2.find({},function(err,data2){
+                    if(err){
+                        console.log("Error from Fetching the contacts");
+                        return;
+                    }
+                    // console.log(data);
+                        if(data2){
+                            Lab3.find({},function(err,data3){
+                                if(err){
+                                    console.log("Error from Fetching the contacts");
+                                    return;
+                                }
+                                // console.log(data);
+                                    if(data3){
+                                        return res.render('login3',{Total:Total,matlab_1:matlab_1,matlab_2:matlab_2,matlab_3:matlab_3,idea_1:idea_1,idea_2:idea_2,idea_3:idea_3,ms_1:ms_1,ms_2:ms_2,ms_3:ms_3,pycharm_1:pycharm_1,pycharm_2:pycharm_2,pycharm_3:pycharm_3,vs_1:vs_1,vs_2:vs_2,vs_3:vs_3,figma_1:figma_1,figma_2:figma_2,figma_3:figma_3,Lab_1:data,Lab_2:data2,Lab_3:data3});
+                                    }
+                                });
+                        }
+                    });
+            }
+        });
 });
 
 app.post('/signin-validation',function(req,res){ 
     var url='/login';
     login=0;
+    
+        Lab2.find({},function(err,data){
+            if(err){
+                console.log("Error from Fetching the contacts");
+                return;
+            }
+            // console.log(data);
+                if(data){
+                Lab_2=data;
+                }
+            });
+        Lab3.find({},function(err,data){
+            if(err){
+                console.log("Error from Fetching the contacts");
+                return;
+            }
+            // console.log(data);
+                if(data){
+                Lab_3=data;
+                }
+            });
+        Lab1.findOne({},function(err,data){
+            if(err){
+                console.log("Error from Fetching the contacts");
+                return;
+            }
+            // console.log(data);
+                if(data){
+                Lab_1=data;
+                }
+            });
     Labs.findOne({name:req.body.name},function(err,data){
         if(err){
             console.log("Error from Fetching the contacts");

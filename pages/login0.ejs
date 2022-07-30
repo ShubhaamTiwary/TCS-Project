@@ -10,6 +10,84 @@
 </head>
 
 <body>
+    <% for(let i of Lab_1) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_1++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_1++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_1++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_1++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_1++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_1++;%>
+          <% }%>
+    <% } %>
+    <% for(let i of Lab_2) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_2++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_2++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_2++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_2++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_2++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_2++;%>
+          <% }%>
+    <% } %>
+    <% for(let i of Lab_3) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_3++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_3++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_3++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_3++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_3++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_3++;%>
+          <% }%>
+    <% } %>
     <div id="div1">
         <div id="div11">
             <img id="logo11" src="login0logo.svg">
@@ -48,36 +126,38 @@
                                 <%}%>
         </div>
         <div id="text2">
-            <% if(locals.idea_1 + locals.idea_2 + locals.idea_3<10){%>
-                0<%= locals.idea_1 + locals.idea_2 + locals.idea_3 %>
+            <% if(locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3<10){%>
+                0<%= locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3 %>
                     <%}%>
-                        <% if(locals.idea_1 + locals.idea_2 + locals.idea_3>=10){%>
-                            <%= locals.idea_1 + locals.idea_2 + locals.idea_3 %>
+                        <% if(locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3>=10){%>
+                            <%= locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3 %>
                                 <%}%>
+            
         </div>
     </div>
     <div id="text3">
-        <% if(locals.ms_1 + locals.ms_2 + locals.ms_3<10){%>
-            0<%= locals.ms_1 + locals.ms_2 + locals.ms_3%>
+        <% if(locals.idea_1 + locals.idea_2 + locals.idea_3<10){%>
+            0<%= locals.idea_1 + locals.idea_2 + locals.idea_3 %>
                 <%}%>
-                    <% if(locals.ms_1 + locals.ms_2 + locals.ms_3>=10){%>
-                        <%= locals.ms_1 + locals.ms_2 + locals.ms_3 %>
+                    <% if(locals.idea_1 + locals.idea_2 + locals.idea_3>=10){%>
+                        <%= locals.idea_1 + locals.idea_2 + locals.idea_3 %>
                             <%}%>
+        
     </div>
     <div id="text4">
-        <% if(locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3<10){%>
-            0<%= locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3 %>
-                <%}%>
-                    <% if(locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3>=10){%>
-                        <%= locals.pycharm_1 + locals.pycharm_2 + locals.pycharm_3 %>
-                            <%}%>
-    </div>
-    <div id="text5">
         <% if(locals.vs_1 + locals.vs_2 + locals.vs_3<10){%>
             0<%= locals.vs_1 + locals.vs_2 + locals.vs_3 %>
                 <%}%>
                     <% if(locals.vs_1 + locals.vs_2 + locals.vs_3>=10){%>
                         <%= locals.vs_1 + locals.vs_2 + locals.vs_3 %>
+                            <%}%>
+    </div>
+    <div id="text5">
+        <% if(locals.ms_1 + locals.ms_2 + locals.ms_3<10){%>
+            0<%= locals.ms_1 + locals.ms_2 + locals.ms_3%>
+                <%}%>
+                    <% if(locals.ms_1 + locals.ms_2 + locals.ms_3>=10){%>
+                        <%= locals.ms_1 + locals.ms_2 + locals.ms_3 %>
                             <%}%>
     </div>
     <div id="text6">
@@ -106,6 +186,10 @@
         </a>
 
     </div>
+    <div id="div6">
+        <div id="div61"> <p>AGNI MONITORING AND ANALYSIS SOFTWARE</p></div>
+    </div>
+    
 </body>
 
 </html>

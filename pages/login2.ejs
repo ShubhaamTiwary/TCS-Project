@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login2</title>
+    <link rel="stylesheet" href="login3.css">
+</head>
+<body>
+    <% for(let i of Lab_1) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_1++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_1++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_1++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_1++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_1++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_1++;%>
+          <% }%>
+    <% } %>
+    <% for(let i of Lab_2) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_2++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_2++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_2++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_2++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_2++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_2++;%>
+          <% }%>
+    <% } %>
+    <% for(let i of Lab_3) {%>
+        <% if(i.app=='Matlab'){%>
+            <%  locals.Total++; %>
+            <% locals.matlab_3++;%>
+          <% }%>
+          <% if(i.app=='Intellij IDEA'){%>
+            <%  locals.Total++; %>
+             <% locals.idea_3++;%>
+          <% }%>
+          <% if(i.app=='MS Office Suit'){%>
+            <%  locals.Total++; %>
+             <% locals.ms_3++;%>
+          <% }%>
+          <% if(i.app=='PyCharm'){%>
+            <%  locals.Total++; %>
+             <% locals.pycharm_3++;%>
+          <% }%>
+        <% if(i.app=='Visual Studio 2022'){%>
+          <%  locals.Total++; %>
+           <% locals.vs_3++;%>
+        <% }%>
+        <% if(i.app=='Figma'){%>
+            <%  locals.Total++; %>
+             <% locals.figma_3++;%>
+          <% }%>
+    <% } %>
+    <div id="div1">
+        <div id="div11">
+            <img id="logo11" src="login0logo.svg">
+        </div>
+        <div id="div12">
+            <a href="/">
+                <img id="logo12" src="logoutbtn.svg">
+            </a>
+        </div>
+        <div id="div13">
+            <img id="logo13" src="accountinfo.svg">
+        </div>
+    </div>
+    <div id="div2">
+        <img id="img22" src="lab2navbar.svg">
+    </div>
+    <div id="div3">
+        <p>No. of apps used by the student  in the LAB - 2 individualy are :</p>
+    </div>
+
+    <div id="div4">
+        <img id="img41" src="lab1apps.svg">
+        <div id="text1">
+            <% if(locals.matlab_2<10){%>
+                0<%= locals.matlab_2 %>
+            <%}%>
+            <% if(locals.matlab_2>=10){%>
+                <%= locals.matlab_2%>
+            <%}%>
+        </div>
+        <div id="text2">
+            <% if(locals.pycharm_2<10){%>
+                0<%= locals.pycharm_2 %>
+            <%}%>
+            <% if(locals.pycharm_2>=10){%>
+                <%= locals.pycharm_2%>
+            <%}%>
+        </div>
+        <div id="text3">
+            <% if(locals.idea_2<10){%>
+                0<%= locals.idea_2 %>
+            <%}%>
+            <% if(locals.idea_2>=10){%>
+                <%= locals.idea_2%>
+            <%}%>
+        </div>
+        <div id="text4">
+            <% if(locals.vs_2<10){%>
+                0<%= locals.vs_2 %>
+            <%}%>
+            <% if(locals.vs_2>=10){%>
+                <%= locals.vs_2 %>
+            <%}%>
+        </div>
+        <div id="text5">
+            <% if(locals.ms_2<10){%>
+                0<%= locals.ms_2 %>
+            <%}%>
+            <% if(locals.ms_2>=10){%>
+                <%= locals.ms_2 %>
+            <%}%>
+        </div>
+        <div id="text6">
+            <% if(locals.figma_2<10){%>
+                0<%= locals.figma_2 %>
+            <%}%>
+            <% if(locals.figma_2>=10){%>
+                <%= locals.figma_2 %>
+            <%}%>
+        </div>
+    </div>
+    <div id="div45">
+        <p id="div45text">Tabular representaion of information (student vise individual) :</p>
+    </div>
+
+    <div id="div5">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Enrollment No.</th>
+                        <th>App Used</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i of Lab_2) {%>
+                        <tr>
+                            <td class="td1" ><%= i.enrollment %></td>
+                            <td class="td2" ><%= i.app %></td>
+                            <td class="td3" >1 Hour 30 min</td>
+                        </tr>
+                    <% } %>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
